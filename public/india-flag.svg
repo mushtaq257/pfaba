@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" role="img" aria-labelledby="title">
+  <title id="title">Flag of India</title>
+  <rect width="30" height="20" rx="2" fill="#fff"/>
+  <path fill="#ff9933" d="M2 0h26v6.67H2z"/>
+  <path fill="#138808" d="M2 13.33h26V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/>
+  <circle cx="15" cy="10" r="3" fill="none" stroke="#000080" stroke-width=".55"/>
+  <g stroke="#000080" stroke-width=".28">
+    <path d="M15 7v6M12 10h6M12.88 7.88l4.24 4.24m0-4.24-4.24 4.24"/>
+    <path d="m13.45 7.2 3.1 5.6m-5.15-1.55 5.2-2.5m.9 3.7-5-4.9m-1 1.4 6 2"/>
+  </g>
+</svg>

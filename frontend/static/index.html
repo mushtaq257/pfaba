@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Finance &amp; Budget Advisor</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main id="authGate" class="auth-page">
+      <section class="auth-card">
+        <div class="auth-brand">
+          <span class="auth-brand-mark" aria-hidden="true">₹</span>
+          <span><strong>Budget Advisor</strong><small>PERSONAL FINANCE</small></span>
+        </div>
+        <div class="auth-illustration" aria-hidden="true">
+          <div class="auth-illustration-heading">
+            <span>YOUR FINANCIAL SNAPSHOT</span>
+            <span class="auth-chart-trend">↗</span>
+          </div>
+          <div class="auth-chart">
+            <i style="height:34px"></i><i style="height:48px"></i><i style="height:41px"></i>
+            <i style="height:65px"></i><i style="height:53px"></i><i style="height:78px"></i>
+            <i style="height:70px"></i><i style="height:96px"></i><i style="height:82px"></i>
+            <i style="height:100px"></i><i style="height:88px"></i><i style="height:112px"></i>
+          </div>
+          <div class="auth-illustration-footer">
+            <span class="auth-ring">₹</span>
+            <span><strong>Plan with confidence</strong><small>Budgets · Goals · Insights</small></span>
+            <span class="auth-arrow">↗</span>
+          </div>
+        </div>
+        <div class="auth-copy">
+          <span class="auth-eyebrow">YOUR MONEY, MADE CLEAR</span>
+          <h1>Build a better relationship with your money.</h1>
+          <p>Get a clear view of your spending, shape a budget that works, and keep your goals in sight.</p>
+        </div>
+        <p id="authMessage" role="status"></p>
+        <button id="authLoginButton" class="auth-login-button" type="button" hidden>
+          <span>Continue securely with Auth0</span><span aria-hidden="true">→</span>
+        </button>
+        <div class="auth-security">
+          <span class="auth-security-icon" aria-hidden="true">✓</span>
+          <span>Your financial data stays private and secure</span>
+        </div>
+      </section>
+      <p class="auth-page-note">A calmer, clearer way to manage your finances.</p>
+    </main>
+    <div class="app-shell" hidden>
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">$</div>
+          <div>
+            <h1>Personal Finance & Budget Advisor</h1>
+            <p>AI-powered money adviser</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Quick Snapshot</h3>
+          <div class="stat-grid">
+            <div>
+              <span class="label">Income</span>
+              <strong id="incomeValue">$0</strong>
+            </div>
+            <div>
+              <span class="label">Spend</span>
+              <strong id="spendValue">$0</strong>
+            </div>
+            <div>
+              <span class="label">Savings</span>
+              <strong id="saveValue">0%</strong>
+            </div>
+            <div>
+              <span class="label">Remaining</span>
+              <strong id="remainingValue">$0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Budget Inputs</h3>
+          <label>Monthly income
+            <input id="incomeInput" type="number" value="0" min="0" />
+          </label>
+          <label>Currency
+            <select id="currencySelect">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="INR">INR</option>
+            </select>
+          </label>
+          <label>Location (optional)
+            <input id="locationInput" type="text" placeholder="e.g. London" />
+          </label>
+          <button id="analyzeButton" class="primary">Analyze spending</button>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <section class="hero">
+          <div>
+            <p class="eyebrow">Finance assistant</p>
+            <h2>AI-Powered Personal Finance Assistant</h2>
+          </div>
+          <div>
+            <button id="demoDataButton" class="secondary">Load demo data</button>
+            <button id="authLogoutButton" class="secondary" type="button">Logout</button>
+          </div>
+        </section>
+
+        <section class="card-grid">
+          <div class="card">
+            <h3>Budget recommendations</h3>
+            <ul id="recommendationsList"></ul>
+          </div>
+          <div class="card">
+            <h3>Alerts</h3>
+            <ul id="alertsList"></ul>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Category breakdown</h3>
+          <div id="categoryBreakdown" class="category-breakdown"></div>
+        </section>
+
+        <section class="chat-panel">
+          <h3>Ask the Advisor</h3>
+          <div id="chatMessages" class="chat-messages">
+            <div id="chatThinking" class="chat-bubble bot chat-thinking" role="status" aria-live="polite" hidden>
+              <span class="thinking-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              Wait for Advisor response..
+            </div>
+          </div>
+          <form id="chatForm" class="chat-form">
+            <input id="chatInput" type="text" placeholder="Ask about expenses, goals, or savings..." />
+            <button type="submit" class="primary">Send</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+fastapi>=0.110.0
+uvicorn>=0.30.0
+python-dotenv>=1.0.1
+requests>=2.32.0
+python-jose[cryptography]>=3.3.0
+langchain>=0.3.0
+langchain-google-genai>=2.0.0
+google-generativeai>=0.8.0
+langfuse>=2.40.0
+pydantic>=2.7.0
+psycopg[binary]>=3.2
